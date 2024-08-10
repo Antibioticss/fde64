@@ -1,13 +1,11 @@
-format ms64 coff
 
-public encode
-public encode as '_encode'
+.section __TEXT,__text,regular,pure_instructions
 
-encode:
-  file 'bin\encode.bin'
+.globl _encode
+.globl _decode
 
-public decode
-public decode as '_decode'
+_encode:
+    .incbin "bin/encode.bin"
 
-decode:
-  file 'bin\decode.bin'
+_decode:
+    .incbin "bin/decode.bin"

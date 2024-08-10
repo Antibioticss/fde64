@@ -8,7 +8,9 @@ encode:
     virtual at rsi
 	.in	fde64s
     end virtual
-	push	rsi rdi
+	; push	rsi rdi
+	mov rcx,rdi
+	mov rdx,rsi
 
 	; prepare stuff
 	mov	rdi,rcx
@@ -233,5 +235,5 @@ encode:
 	mov	[.in.len],dil
 	xchg	eax,edi
 
-	pop	rdi rsi
+	; pop	rdi rsi
 	retn

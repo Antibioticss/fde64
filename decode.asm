@@ -8,7 +8,9 @@ decode:
     virtual at rdx
 	.out	fde64s
     end virtual
-	push	rbx rsi rdi
+	push	rbx
+	mov rcx,rdi
+	mov rdx,rsi
 
 	; prepare stuff
 	mov	rsi,rcx
@@ -434,7 +436,7 @@ decode:
 	test	[.out.flags],F_ERROR_OPCODE+F_ERROR_LENGTH+F_ERROR_X86_64+F_ERROR_LOCK+F_VEX_BAD_PREFIX
 	sete	al			; return zero if any error-flag is set, otherwise nonzero
 
-	pop	rdi rsi rbx
+	pop	rbx
 	retn
 
   ; opcode table flags

@@ -13,7 +13,7 @@ tags/
 
 # Libraries
 *.lib
-*.a
+# *.a
 *.la
 *.lo
 
@@ -30,3 +30,6 @@ tags/
 *.i*86
 *.x86_64
 *.hex
+
+# macOS files
+.DS_Store

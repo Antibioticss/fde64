@@ -1,3 +1,10 @@
+this is a fork of fde64 to make it running on macOS
+compile:
+  use fasm on windows to compile decode.asm and encode.asm to decode.bin and encode.bin
+  then place them in the bin folder and use as to compile fde64.asm
+  pre-compiled library at libfde64.a
+
+
   un[f]ancy [d]isassembler [e]ngine (fde64) v0.04
 
   fde64 is an extended length disassembler engine
